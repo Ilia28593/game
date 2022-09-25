@@ -18,14 +18,6 @@ import java.util.*;
 public class Service {
     private final PlayerRepository playerRepository;
 
-    public List<Player> getAllPlayers() {
-        return playerRepository.findAll();
-    }
-
-    public Integer getCountPlayers() {
-        return playerRepository.findAll().size();
-    }
-
     public List<Player> getFilteredPlayers(String name, String title, Race race, Profession profession,
                                            Long after, Long before, Boolean banned, Integer minExperience,
                                            Integer maxExperience, Integer minLevel, Integer maxLevel) {
